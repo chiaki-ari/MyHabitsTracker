@@ -1,0 +1,17 @@
+# VSCode の設定ファイル（環境依存のため）
+.vscode/
+*.code-workspace
+
+# ビルド成果物（コンパイル時に生成）
+build/
+*.o
+*.exe
+
+# データファイル（変更される可能性が高い）
+data/
+
+# 一時ファイルや OS 依存のファイル
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
