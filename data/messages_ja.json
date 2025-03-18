@@ -1,0 +1,79 @@
+{
+    "menu_title": "習慣達成表 ver.1",
+
+    "menu_option_record": "記録表示",
+    "menu_option_update": "記録更新",
+    "menu_option_manage": "習慣管理",
+
+    "menu_option_habits_view": "表示",
+    "menu_option_add": "追加",
+    "menu_option_edit": "変更",
+    "menu_option_remove": "削除",
+
+    "menu_option_record_today": "今日",
+    "menu_option_record_week": "今週",
+    "menu_option_record_month": "今月",
+    "menu_option_record_all": "全て",
+    "menu_option_record_selected_day": "日付指定",
+
+    "menu_option_exit": "[x] 戻る/終了",
+
+    "error_invalid_input": "不正な入力",
+    "prompt_cancel": "キャンセル",
+
+    "back_to_menu": "メニューに戻ります...",
+    "exit": "アプリを終了します...",
+    
+    "error_invalid_number_input": "範囲外の選択です。もう一度入力してください。",
+    "error_invalid_number": "範囲外の選択",
+
+    "title_bar": "\n==== {} ====",
+    "prompt_input_start": "> ",
+    "bullet_points": " - ",
+    "alert_prompt": "⚠️ {}",
+
+    "prompt_input_date": " 日付を入力 (YYYY-MM-DD) or \n   't' で本日 / 'y' で昨日",
+    "prompt_input_date_View": " 日付を入力 (YYYY-MM-DD) or \n   'y' で昨日",
+    "prompt_record": "{} の習慣を記録します",
+    "error_invalid_date_input": "日付形式が不正です(YYYY-MM-DD)",
+
+    "habits_list_title": "登録されている習慣一覧",
+
+    "prompt_input_add_habit": "追加する習慣名: ",
+    "add_habit_complete": "「{}」を追加しました",
+
+    "prompt_input_edit_habit": "変更したい習慣名: ",
+    "prompt_input_replace_habit": "新しい習慣名: ",
+    "error_invalid_habit_input": " は存在しないため編集できません",
+    "edit_habit_complete": "「{}」→「{}」に変更しました",
+
+    "prompt_input_remove_habit": "削除したい習慣名: ",
+    "remove_habit_complete": "「{}」を削除しました（過去の記録は残ります）",
+
+    "error_no_habit": "習慣が1つも登録されていません！先に習慣を追加してください",
+    "habit_record_prompt": "> {} (1: 達成, 0: 未達成): ",
+    "error_invalid_input_habit_record": "0 または 1 を入力してください",
+
+    "error_no_record": "{} のデータはありません！",
+    "error_no_data": "データがありません！",
+
+
+    "title_achievement_status": "{}の達成状況",
+
+    "achievement_points": "  [x]    ",
+    "unachievement_points": "  [ ]    ",
+
+    "prompt_achievement_rate": "  < 達成率: {}%>",
+
+    "one_week_record_title": "1週間の記録 {} ~ {}",
+    "this_month_record_title": "今月の記録 {}年{}月",
+    "all_record_title": "すべての記録",
+
+    
+    "error_load_json": "ERROR: '{}' の読み込み失敗",
+    "error_parse_json": "ERROR: JSONパースエラー",
+    "error_save_json": "ERROR: '{}' の書き込み失敗",
+    "error_save_json_2": "ERROR: JSONパースエラー",
+
+    "wait_for_enter": "Enterキーを押して戻る..."
+}

@@ -1,0 +1,77 @@
+{
+    "menu_title": "My Habits Tracker Ver.1",
+
+    "menu_option_record": "View Records",
+    "menu_option_update": "Update Records",
+    "menu_option_manage": "Manage Habits",
+
+    "menu_option_habits_view": "View Habits",
+    "menu_option_add": "Add Habit",
+    "menu_option_edit": "Edit Habit",
+    "menu_option_remove": "Remove Habit",
+
+    "menu_option_record_today": "Today",
+    "menu_option_record_week": "This Week",
+    "menu_option_record_month": "This Month",
+    "menu_option_record_all": "All",
+    "menu_option_record_selected_day": "Select date",
+
+    "menu_option_exit": "[x] Return/Exit",
+
+    "error_invalid_input": "Invalid input",
+    "prompt_cancel": "Cancel",
+
+    "back_to_menu": "Returning to menu...",
+    "exit": "Exiting the application...",
+
+    "error_invalid_number_input": "Invalid choice. Please enter again.",
+    "error_invalid_number": "Invalid choice",
+
+    "title_bar": "\n==== {} ====",
+    "prompt_input_start": "> ",
+    "bullet_points": " - ",
+    "alert_prompt": "⚠️ {}",
+
+    "prompt_input_date": " Enter the date (YYYY-MM-DD) or \n   Press 't' for today / 'y' for yesterday",
+    "prompt_input_date_View": " Enter the date (YYYY-MM-DD) or \n   'y' for yesterday",
+    "prompt_record": "Recording habit for {}",
+    "error_invalid_date_input": "Invalid date format (YYYY-MM-DD)",
+
+    "habits_list_title": "List of Registered Habits",
+
+    "prompt_input_add_habit": "Enter habit name to add: ",
+    "add_habit_complete": "Added \"{}\" successfully.",
+
+    "prompt_input_edit_habit": "Enter habit name to edit: ",
+    "prompt_input_replace_habit": "Enter new habit name: ",
+    "error_invalid_habit_input": " does not exist and cannot be edited.",
+    "edit_habit_complete": "Changed \"{}\" to \"{}\" successfully.",
+
+    "prompt_input_remove_habit": "Enter habit name to remove: ",
+    "remove_habit_complete": "Removed \"{}\" successfully. (Past records remain.)",
+
+    "error_no_habit": "No habits registered! Please add a habit first.",
+    "habit_record_prompt": "> {} (1: Achieved, 0: Not achieved): ",
+    "error_invalid_input_habit_record": "Please enter 0 or 1.",
+
+    "error_no_record": "{} data not found!",
+    "error_no_data": "No data available!",
+
+    "title_achievement_status": "Achievement Status for {}",
+
+    "achievement_points": "  [x]    ",
+    "unachievement_points": "  [ ]    ",
+
+    "prompt_achievement_rate": "  < Achievement Rate: {}% >",
+
+    "one_week_record_title": "One-Week Record {} ~ {}",
+    "this_month_record_title": "Monthly Record: {}-{}",
+    "all_record_title": "All Records",
+
+    "error_load_json": "ERROR: Failed to load '{}'",
+    "error_parse_json": "ERROR: JSON parsing error",
+    "error_save_json": "ERROR: Failed to save '{}'",
+    "error_save_json_2": "ERROR: JSON parsing error",
+
+    "wait_for_enter": "Press Enter to return..."
+}

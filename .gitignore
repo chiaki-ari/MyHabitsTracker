@@ -8,7 +8,8 @@ build/
 *.exe
 
 # データファイル（変更される可能性が高い）
-data/
+data/habits.json
+data/records.json
 
 # 一時ファイルや OS 依存のファイル
 *.log
