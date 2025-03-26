@@ -1,0 +1,122 @@
+{
+    "menu_title": "習慣達成表 ver.1",
+
+    "menu_view_record": "記録を見る",
+    "menu_update_record": "記録を更新",
+    "menu_manage_habits": "習慣を管理",
+    "menu_export_records": "記録を出力",
+
+    "menu_view_habits": "習慣を見る",
+    "menu_add_habit": "習慣を追加",
+    "menu_edit_habit": "習慣を変更",
+    "menu_remove_habit": "習慣を削除",
+    
+    "record_today": "今日の記録",
+    "record_select_day": "指定日の記録",
+    "record_specific_habit": "指定日の特定習慣記録",
+    "continuous_record_mode": "連続記録モード",
+    "record_continuous_date": "指定日から連続記録",
+    "record_continuous_habit": "指定習慣の連続記録",
+
+    "record_complete": "記録が完了しました",
+    "continuous_record_complete": "連続記録が完了しました（{}日）",
+    "record_cancelled": "記録がキャンセルされました。ここまでの進捗は保存されました。",
+    
+    "error_no_habits": "習慣が1つも登録されていません！先に習慣を追加してください。",
+    "error_invalid_number": "無効な番号です。再入力してください。",
+    "error_invalid_date": "日付形式が不正です(YYYY-MM-DD)",
+
+    "prompt_record_input_date": "日付を入力 (YYYY-MM-DD) ('t'で本日 / 'y'で昨日)",
+
+    "record_today_progress": "日付: {} (1: 達成, 0: 未達成, 空欄: キャンセル)",
+    "record_progress": "日付: {} - 残り {} 日 (1: 達成, 0: 未達成, 空欄: キャンセル)",
+    "prompt_record_progress": "記録中の日付: {} - 残り {} 日",
+
+    "prompt_cancelled_record": "キャンセル - これまでの記録は保存されています。",
+    "prompt_record_complete": "記録が完了しました ({}件)",
+    "prompt_oneday_record_progress": "記録更新中: {}",
+
+    "menu_option_show_today": "今日",
+    "menu_option_show_week": "今週",
+    "menu_option_show_month": "今月",
+    "menu_option_show_all": "全て",
+    "menu_option_show_selected_day": "日付指定",
+    "menu_option_show_selected_week": "週指定",
+    "menu_option_show_selected_month": "月指定",
+
+    "habits_list_title": "習慣一覧",
+    "prompt_input_add_habit": "追加する習慣名を入力",
+
+    "prompt_input_edit_habit": "変更する習慣名を入力",
+    "prompt_input_replace_habit": "新しい習慣名を入力",
+
+    "prompt_input_remove_habit": "削除する習慣名を入力:",
+
+    "error_invalid_habit_input": "習慣名が不正です。",
+    "error_no_record": "{} のデータが見つかりません。",
+    "error_no_data": "データが存在しません。",
+
+    "achievement_points": "[x]",
+    "unachievement_points": "[ ]",
+
+    "prompt_achievement_rate": "達成率: {}%",
+
+    "wait_for_enter": "Enterキーを押してください...",
+    "prompt_cancel": "キャンセル",
+    "exit": "終了します。Good bye!...",
+    "back_to_menu": "メニューに戻ります...",
+
+    "record_specific_date_habit_progress": "指定日付の習慣更新: {}",
+
+    "recode_paging_guide": "← 前 / 次 →",
+
+
+    "guide_record_continuous_date": "選択した開始日から終了日まで、連続して習慣を記録します。",
+    "guide_record_continuous_habit": "選択した開始日から終了日まで、特定の習慣を連続して記録します。",
+
+    "select_user_prompt": "ユーザ番号 or 新規ユーザ名入力 ",
+    "creating_new_user_prompt": "新規ユーザを追加します : ",
+    "switching_user_prompt": "ユーザを切替えます : ",
+    "current_user": " 現在のユーザ: ",
+
+
+    "prompt_input_date": "日付を入力 (YYYY-MM-DD) ('t'で本日 / 'y'で昨日)",
+    "prompt_input_start_date": "開始日を入力 (YYYY-MM-DD) ('t'で本日 / 'y'で昨日)",
+    "prompt_input_end_date": "終了日を入力 (YYYY-MM-DD) ('t'で本日 / 'y'で昨日)",
+    "prompt_input_week": "週の開始日を入力 (YYYY-MM-DD)",
+    "prompt_input_year": "年を入力 (YYYY):",
+    "prompt_input_month": "月を入力 (MM):",
+    "prompt_continue_habit": "別の習慣を続けますか？ (y/n):",
+    "prompt_select_habit": "習慣を選択してください (番号)",
+    "prompt_invalid_action": "無効な操作です。",
+    
+    "error_invalid_year_input": "年の形式が不正です。1900-2100の範囲で指定してください。",
+    "error_invalid_month_input": "月の形式が不正です。1-12の範囲で指定してください。",
+    "selected_month_record_title": "{}年 {}月の記録",
+    
+    "prompt_input_date_View": " 日付 (YYYY-MM-DD) / 'y' 昨日 :",
+    "prompt_record": "{} の習慣を記録しました",
+
+
+    "title_habit_management": "習慣管理",
+    "title_record_update": "記録更新",
+    "add_habit_complete": "習慣の追加が完了しました: {}",
+    "edit_habit_complete": "習慣の編集が完了しました: {} -> {}",
+    "remove_habit_complete": "習慣の削除が完了しました: {}",
+  
+
+    "title_achievement_status": "{}の達成状況",
+
+
+    "one_week_record_title": "1週間の記録 {} ~ {}",
+    "this_month_record_title": "1か月の記録 {}年{}月",
+    "all_record_title": "すべての記録",
+
+
+    "menu_option_switch_user": "[u] ユーザ切替",
+    "menu_option_exit": "[x] 戻る/終了",
+
+
+    "error_habit_already_exists": "その習慣は既に存在します。",
+    "error_save_failed": "ファイルへの保存に失敗しました。"
+}

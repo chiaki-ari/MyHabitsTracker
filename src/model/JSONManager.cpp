@@ -1,37 +1,44 @@
 #include "model/JSONManager.hpp"
+#include <fstream>
 #include <iostream>
 
-bool JSONManager::load(json& data){
+bool JSONManager::load(json &data) {
+    // ファイルを開く
     std::ifstream inFile(filename_);
+    
+    if (!inFile) {
+        // ファイルが開けなかった場合のエラーハンドリング
+        std::cerr << "ERROR: Failed to load file '" << filename_ << "'" << std::endl;
+        data = json::object();  // 空のオブジェクトを返す
+        return LOAD_ERROR;
+    }
 
-    if(!inFile){
-        std::cerr << "ERROR: '" << filename_ << "'' の読み込み失敗" <<std::endl;
-        data = json::object(); //空のJSONオブジェクトを生成
-        return LOAD_ERROR;
-    }
     try {
-        inFile >> data;
-    } catch (json::parse_error& e){
-        std::cerr << "ERROR: JSONパースエラー" << e.what() << std::endl;
-        data = json::object();
+        // JSONデータをパースする
+        data = json::parse(inFile);
+    } catch (json::parse_error &e) {
+        // JSONパースエラーの場合のエラーハンドリング
+        std::cerr << "ERROR: JSON parsing error - " << e.what() << std::endl;
         return LOAD_ERROR;
     }
-        inFile.close();
-        return LOAD_SUCCESS;
+
+    // ファイルを閉じる
+    inFile.close();
+    return LOAD_SUCCESS;
 }
 
-bool JSONManager::save(const json& data){
+bool JSONManager::save(const json &data) {
+    // ファイルを開く
     std::ofstream outFile(filename_);
-    if(!outFile){
-        std::cerr << "ERROR: '" << filename_ << "'' の書き込み失敗" <<std::endl;
+    
+    if (!outFile) {
+        // ファイルが開けなかった場合のエラーハンドリング
+        std::cerr << "ERROR: Failed to write to file '" << filename_ << "'" << std::endl;
         return SAVE_ERROR;
     }
-    try {
-        outFile << data.dump(4);
-    } catch (const std::exception& e) {
-        std::cerr << "ERROR: JSON 書き込みエラー: " << e.what() << std::endl;
-        return SAVE_ERROR;
-    }
+
+    // JSONデータをファイルに書き込む
+    outFile << data.dump(4);
     outFile.close();
     return SAVE_SUCCESS;
 }

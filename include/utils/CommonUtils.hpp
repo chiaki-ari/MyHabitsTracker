@@ -5,31 +5,39 @@
 #include <windows.h>
 #endif
 
-class CommonUtils {
+class CommonUtils
+{
 public:
-    static CommonUtils& getInstance() {
+    static CommonUtils &getInstance()
+    {
         static CommonUtils instance;
         return instance;
     }
-    
-    void clearScreen() {
-        #ifdef _WIN32
-            std::system("cls");  // Windows の場合
-        #else
-            std::system("clear"); // Mac / Linux の場合
-        #endif
+
+    void clearScreen()
+    {
+#ifdef _WIN32
+        std::system("cls"); // Windows の場合
+#else
+        std::system("clear"); // Mac / Linux の場合
+#endif
     }
-    
-    void setConsole() {
-        #ifdef _WIN32
-            // Windows のコンソール文字コードをUTF-8に設定
-            SetConsoleOutputCP(65001);
-        #endif
+
+    void setConsole()
+    {
+#ifdef _WIN32
+        // Windows のコンソール文字コードをUTF-8に設定
+        SetConsoleCP(CP_UTF8);  //input
+        SetConsoleOutputCP(65001);  //output
+        setvbuf(stdout, nullptr, _IOFBF, 1024);
+        // SetConsoleOutputCP(932);
+#endif
     }
+
 private:
     CommonUtils() {}
     // シングルトン：コピー・代入を禁止
-    CommonUtils(const CommonUtils&) = delete;
-    CommonUtils& operator=(const CommonUtils&) = delete;
+    CommonUtils(const CommonUtils &) = delete;
+    CommonUtils &operator=(const CommonUtils &) = delete;
 };
 #endif // COMMONUTILS_HPP

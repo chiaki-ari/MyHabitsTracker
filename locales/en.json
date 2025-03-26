@@ -1,0 +1,134 @@
+{
+    "menu_title": "My Habits Tracker Ver.1",
+
+    "menu_view_record": "View Records",
+    "menu_update_record": "Update Records",
+    "menu_manage_habits": "Manage Habits",
+    "menu_export_records": "Export Records",
+
+    "menu_view_habits": "View Habits",
+    "menu_add_habit": "Add Habit",
+    "menu_edit_habit": "Edit Habit",
+    "menu_remove_habit": "Remove Habit",
+
+    "record_today": "Record Today",
+    "record_select_day": "Record select day",
+    "record_sigle_habit": "Specific Habit on a Date",
+    "continuous_record_mode": "Continuous Recording Mode",
+    "record_continuous_date": "Continuous Recording by Date",
+    "record_continuous_habit": "Continuous Recording by Habit",
+
+    "record_complete": "Recording complete.",
+    "continuous_record_complete": "Continuous recording complete ({} days).",
+    "record_cancelled": "Recording cancelled. Saved progress up to this point.",
+    "record_today_progress": "Date: {} (1: Achieved, 0: Not achieved, Enter: Cancel)",
+    "record_continuous_progress": "Date: {} - {}  days left (1: Achieved, 0: Not achieved, Enter: Cancel)",
+
+
+    "error_no_habits": "No habits registered! Please add some first.",
+    "error_invalid_number": "Invalid number. Try again.",
+    "error_invalid_date": "Invalid date format (YYYY-MM-DD).",
+
+    "prompt_record_input_date": "Enter date (YYYY-MM-DD) / 't' today / 'y' yesterday",
+
+  
+    "prompt_record_complete": "Recording completed ({} items)",
+    "prompt_cancelled_record": "Cancelled - Progress saved up to this point.",
+
+    "add_habit_complete": "Habit added successfully: {}",
+    "edit_habit_complete": "Habit edited successfully: {} -> {}",
+    "remove_habit_complete": "Habit removed successfully: {}",
+    "title_habit_management": "Habit Management",
+    "title_record_update": "Record Update",
+    "prompt_select_habit": "Select a habit (number)",
+    "prompt_invalid_number": "Invalid number.",
+    "prompt_invalid_date_input": "Invalid date format.",
+    "prompt_invalid_action": "Invalid operation.",
+    "error_invalid_number_input": "Invalid number input.",
+    "error_no_habit": "No habits registered.",
+    "error_no_data": "No data available.",
+    "habits_list_title": "Registered Habit List",
+    "title_achievement_status": "Achievement Status ({})",
+    "menu_option_show_today": "Today",
+    "menu_option_show_week": "This Week",
+    "menu_option_show_month": "This Month",
+    "menu_option_show_all": "All",
+    "menu_option_show_selected_day": "Select Date",
+    "menu_option_show_selected_week": "Select Week",
+    "menu_option_show_selected_month": "Select Month",
+
+    "prompt_input_add_habit": "Enter habit name to add:",
+
+    "prompt_input_edit_habit": "Enter habit name to edit:",
+    "prompt_input_replace_habit": "Enter new habit name:",
+    "prompt_input_remove_habit": "Enter habit name to remove:",
+
+    "error_invalid_habit_input": "Invalid habit name.",
+    "error_no_record": "{} data not found!",
+
+    "achievement_points": "[x]",
+    "unachievement_points": "[ ]",
+
+    "prompt_achievement_rate": "Achievement Rate: {}%",
+
+    "wait_for_enter": "Press Enter to continue...",
+    "prompt_cancel": "Cancel",
+    "exit": "Exiting... Goodbye!",
+    "back_to_menu": "Returning to menu...",
+
+
+    "recode_paging_guide": "← Previous / Next →",
+
+
+
+    "prompt_one_habit_record_complete": "Continue recording next habit",
+ 
+
+
+    "select_user_prompt": "Select a user by number or enter a new username",
+    "creating_new_user_prompt": "Creating new user: ",
+    "switching_user_prompt": "Switching to user: ",
+    "current_user": " Current user: ",
+
+    "menu_option_switch_user": "[u] Switch User",
+    "menu_option_exit": "[x] Return/Exit",
+
+    "error_invalid_input": "Invalid input",
+
+
+
+
+    "prompt_input_date": "Date (YYYY-MM-DD) / 't' today / 'y' yesterday",
+    "prompt_input_start_date": "Start date (YYYY-MM-DD) / 't' today / 'y' yesterday",
+    "prompt_input_end_date": "End date (YYYY-MM-DD) / 't' today / 'y' yesterday",
+    "prompt_input_week": "Input the start date (YYYY-MM-DD) of the week",
+    "prompt_input_year": "Input the year (YYYY)",
+    "prompt_input_month": "Input the month (1-12)",
+    "prompt_record": "Recorded habit for {} successfully.",
+    "prompt_oneday_record_progress": "Updating record: {}",
+    "prompt_record_progress": "Updating record: {}",
+    "prompt_input_start": "Enter start date:",
+    
+    "error_invalid_year_input": "Invalid year format. Please specify between 1900 and 2100.",
+    "error_invalid_month_input": "Invalid month format. Please specify between 1 and 12.",
+    "selected_month_record_title": "Record for {}-{}",
+
+
+
+    "record_specific_date_habit_progress": "Update Specific Habit on {}",
+
+    "guide_record_continuous_date": "Record habits continuously from the selected start date to the end date.",
+    "guide_record_continuous_habit": "Record a specific habit continuously from the selected start date to the end date.",
+
+
+    "one_week_record_title": "One-Week Record {} ~ {}",
+    "this_month_record_title": "Monthly Record: {}-{}",
+    "all_record_title": "All Records",
+
+
+
+
+    "error_habit_already_exists": "This habit already exists.",
+    "error_save_failed": "Failed to save to the file."
+
+}

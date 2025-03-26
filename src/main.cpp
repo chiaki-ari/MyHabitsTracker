@@ -1,15 +1,31 @@
-#include "AppController.hpp"
+#include "controllers/AppController.hpp"
 #include "input/ConsoleInput.hpp"
 #include "output/ConsoleOutput.hpp"
 #include "utils/CommonUtils.hpp"
 
+
+// グローバル変数の定義
+bool g_debugMode = false;
+
+// コマンドライン引数の処理関数
+void parseCommandLineArguments(int argc, char* argv[]) {
+    for (int i = 1; i < argc; ++i) {
+        if (std::string(argv[i]) == "--debug") {
+            g_debugMode = true;
+            std::cout << "Debug mode is ON." << std::endl;
+            break;
+        }
+    }
+}
+
 // 言語選択の入力を取得する関数
-std::string selectLanguage(InputManager& inputManager) {
+std::string selectLanguage(InputManager& inputMgr) {
     auto& common_ = CommonUtils::getInstance();
-    common_.setConsole();    
-    std::cout << "Please select a language (e: English, j: Japanese)\n言語を選択してください (e: 英語, j: 日本語)\n> ";
+    common_.setConsole();   
+
+    std::cout << "Please select a language (e: English, j: 日本語) :";
     while (true) {
-        auto input = inputManager.getStringInput();
+        auto input = inputMgr.getStringInput();
         if (input.has_value() && (input.value() == "e" || input.value() == "j")) {
             return input.value() == "e" ? "en" : "ja";
         }
@@ -17,17 +33,25 @@ std::string selectLanguage(InputManager& inputManager) {
     }
 }
 
-int main() {
+int main(int argc, char* argv[]) {
+    parseCommandLineArguments(argc, argv);
     ConsoleInput consoleInput;
-    InputManager inputManager(consoleInput);
+    InputManager inputMgr(consoleInput);
 
-    std::string lang = selectLanguage(inputManager);
+    std::string lang = selectLanguage(inputMgr);
 
-    MessageManager messageManager(lang);
+    LogManager logMgr;
+    //DEBUGレベル以下のログがすべて出力
+    logMgr.createLogFileIfNotExists();
+    logMgr.setLogLevel(LogLevel::DEBUG);
+    // logMgr.logInfo("Application started.");
+
+    I18nManager i18nMgr(lang);
     ConsoleOutput consoleOutput;
-    OutputManager outputManager(consoleOutput);
+    OutputManager outputMgr(consoleOutput);
     
-    AppController app("data/habits.json", "data/records.json", messageManager, inputManager, outputManager);
+    AppController app(i18nMgr, inputMgr, outputMgr, logMgr);
+    app.initialize();
     app.run();
 
     return 0;

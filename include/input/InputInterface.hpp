@@ -4,7 +4,8 @@
 #include <optional>
 #include <string>
 
-class InputInterface {
+class InputInterface 
+{
 public:
     virtual std::optional<std::string> getStringInput() = 0;
     virtual ~InputInterface() = default;

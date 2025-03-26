@@ -1,69 +1,37 @@
 # Compiler and Flags
 CXX := g++
-CXXFLAGS := -Wall -Wextra -std=c++20 -g \
+CXXFLAGS := -Wall -Wextra -std=c++20 -lstdc++fs -finput-charset=UTF-8 -g \
     -Iinclude \
-    -Iinclude/menus \
-    -Iinclude/model \
     -Iinclude/utils \
-    -Iinclude/core \
     -Iinclude/input \
     -Iinclude/output \
-    -Iinclude/message
+    -Iinclude/core \
+    -Iinclude/model \
+    -Iinclude/repositories \
+    -Iinclude/menus \
+    -Iinclude/controllers
 
 # Build Directories
 BUILD_DIR := build
-BUILD_SUBDIRS := $(BUILD_DIR) $(BUILD_DIR)/menus $(BUILD_DIR)/model $(BUILD_DIR)/utils $(BUILD_DIR)/core $(BUILD_DIR)/input $(BUILD_DIR)/output $(BUILD_DIR)/message
-SRC_DIRS := src src/menus src/model src/utils src/core src/input src/output src/message
-TARGET := tracker.exe
+SRC_DIRS := src/utils src/input src/output src/core src/model src/repositories src/menus src/services src/controllers src
 
 # Source and Object Files
 SRCS := $(wildcard $(foreach d,$(SRC_DIRS),$(d)/*.cpp))
 OBJS := $(patsubst src/%.cpp, $(BUILD_DIR)/%.o, $(SRCS))
 
 # Ensure all directories exist before compilation
+BUILD_SUBDIRS := $(foreach d,$(SRC_DIRS),$(BUILD_DIR)/$(notdir $(d)))
 $(shell mkdir $(BUILD_DIR) 2> NUL)
-$(shell mkdir $(BUILD_DIR)/menus 2> NUL)
-$(shell mkdir $(BUILD_DIR)/model 2> NUL)
-$(shell mkdir $(BUILD_DIR)/utils 2> NUL)
-$(shell mkdir $(BUILD_DIR)/input 2> NUL)
-$(shell mkdir $(BUILD_DIR)/output 2> NUL)
-$(shell mkdir $(BUILD_DIR)/message 2> NUL)
+$(foreach d,$(BUILD_SUBDIRS),$(shell mkdir $(d) 2> NUL))
 
 # Linking
+TARGET := tracker.exe
 $(TARGET): $(OBJS)
 	@echo "🔨 Linking..."
 	@$(CXX) $(CXXFLAGS) -o $@ $^
 
 # Object File Compilation
 $(BUILD_DIR)/%.o: src/%.cpp | $(BUILD_SUBDIRS)
-	@echo "🔧 Compiling $<..."
-	@$(CXX) $(CXXFLAGS) -c $< -o $@
-
-$(BUILD_DIR)/menus/%.o: src/menus/%.cpp | $(BUILD_SUBDIRS)
-	@echo "🔧 Compiling $<..."
-	@$(CXX) $(CXXFLAGS) -c $< -o $@
-
-$(BUILD_DIR)/model/%.o: src/model/%.cpp | $(BUILD_SUBDIRS)
-	@echo "🔧 Compiling $<..."
-	@$(CXX) $(CXXFLAGS) -c $< -o $@
-
-$(BUILD_DIR)/utils/%.o: src/utils/%.cpp | $(BUILD_SUBDIRS)
-	@echo "🔧 Compiling $<..."
-	@$(CXX) $(CXXFLAGS) -c $< -o $@
-
-$(BUILD_DIR)/core/%.o: src/core/%.cpp | $(BUILD_SUBDIRS)
-	@echo "🔧 Compiling $<..."
-	@$(CXX) $(CXXFLAGS) -c $< -o $@
-
-$(BUILD_DIR)/input/%.o: src/input/%.cpp | $(BUILD_SUBDIRS)
-	@echo "🔧 Compiling $<..."
-	@$(CXX) $(CXXFLAGS) -c $< -o $@
-
-$(BUILD_DIR)/output/%.o: src/output/%.cpp | $(BUILD_SUBDIRS)
-	@echo "🔧 Compiling $<..."
-	@$(CXX) $(CXXFLAGS) -c $< -o $@
-
-$(BUILD_DIR)/message/%.o: src/message/%.cpp | $(BUILD_SUBDIRS)
 	@echo "🔧 Compiling $<..."
 	@$(CXX) $(CXXFLAGS) -c $< -o $@
 
